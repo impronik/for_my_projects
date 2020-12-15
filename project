@@ -1,0 +1,17 @@
+from matplotlib import pyplot as plt
+from matplotlib.offsetbox import OffsetImage, AnnotationBbox
+import numpy as np
+
+
+'Picture insert (size unchanged)'
+N = 100
+x = np.linspace(0, 10, N)
+y = np.sin(x)
+fig = plt.figure()
+ax = fig.add_subplot(111)
+ax.plot(x, y)
+img = plt.imread('icon\\icon-test.png')
+im = OffsetImage(img, zoom=0.3)
+ab = AnnotationBbox(im, (x[0],y[0]), xycoords='data', frameon=False)
+ax.add_artist(ab)
+plt.show()
