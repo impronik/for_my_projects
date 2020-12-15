@@ -3,7 +3,7 @@ from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 import numpy as np
 
 
-'Picture insert (size unchanged)'
+'Вставить картинку (Размер не менять)'
 N = 100
 x = np.linspace(0, 10, N)
 y = np.sin(x)
